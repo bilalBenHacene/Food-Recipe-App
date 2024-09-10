@@ -3,7 +3,8 @@ import { GlobalContext } from "../../context";
 import RecipeItem from "../../component/recipeItem";
 
 const Home = () => {
-  const { recipes, loading } = useContext(GlobalContext);
+  const { recipes, loading ,focusNavbar} = useContext(GlobalContext);
+  // focusNavbar("home")
   if (loading) return <p>Loading Data ...</p>;
   return (
     <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">

@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { GlobalContext } from "../../context";
 import { Link } from "react-router-dom";
 import RecipeItem from "../../component/recipeItem";
 
 const Favorites = () => {
   const { favorites } = useContext(GlobalContext);
+  
   return (
     <div
       className={

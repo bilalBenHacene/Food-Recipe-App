@@ -8,6 +8,9 @@ const Context = ({ children }) => {
   const [error, setError] = useState("");
   const [recipes, setRecipes] = useState([]);
   const [favorites, setFavorites] = useState([]);
+  const focusNavbar=(ref)=>{
+    ref.current.focus();
+  }
   const handleFavoriteList = (item) => {
     let copyList = [...favorites];
     let keys=copyList.map(elt=>elt.id)
@@ -43,6 +46,7 @@ const Context = ({ children }) => {
         handleSubmit,
         handleFavoriteList,
         favorites,
+        focusNavbar
       }}
     >
       {children}
